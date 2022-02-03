@@ -1,3 +1,9 @@
+:root{
+  --header-height: 100px;
+  min-width: 320px;
+}
+
+
 html{
    min-height: 100%; 
    margin:0;   
@@ -7,14 +13,15 @@ body{
     min-height: 100vh;
 }
 
-.container__app{
-   height: 100%;
-   width: 100%;
-   margin: 0;
+main{
+  height: calc(100vh - var(--header-height));
 }
 
+
+
+
 .header {
-    
+  height: var(--header-height);
   background-color: gray;
   display: flex;
   align-items: center;
@@ -25,6 +32,7 @@ body{
   overflow: hidden;
   color: white;
   font-family: "Ubuntu", sans-serif;
+  
 }
 
 .pokemon__name {
@@ -32,15 +40,26 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 80%;
   border-radius: 10px;
   font-family: "Ubuntu", sans-serif;
-  margin-top: 1rem;  
+  margin-top: 1rem; 
+   
+}
+
+.pkm__name__icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2rem;  
+  border-radius: 15px;
+  cursor: pointer;
+  padding: 0.5rem;
 }
 
 .pok__name {
   color: black;
   margin-left: 0.3rem;
+  margin-right: 1rem;
   font-size: 2.5rem;
 }
 
@@ -58,6 +77,7 @@ body{
 }
 
 .body__content {
+  height: calc(100vh - var(--header-height));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -71,10 +91,10 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 10rem;
-  width: 10rem;
+  height: 5.5rem;
+  width: 5.5rem;
   background-color: lightgray;
-  border-radius: 15px;
+  border-radius: 1rem;
   cursor: pointer;
 }
 
@@ -99,13 +119,12 @@ body{
   flex-direction: column;
   justify-content: center;
   background-color: white;
-  width: 75%;
-  height: 40%;
+  width: auto;  
   padding: 0.625rem;
   margin: 0.625rem;
   border-radius: 15px;
   font-family: "Prompt", sans-serif;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .table__data{
@@ -118,6 +137,9 @@ body{
   justify-content: space-evenly;
   padding: 1rem;
   margin: 0.625rem;
+}
+.data__value{
+  margin: 0.5rem;
 }
 
 .footer {
@@ -178,8 +200,8 @@ body{
     }
 
     .pokemon__data{
-        width: 40%;
-        height: 100%;
+        width: 50%;
+        
     }
     
     .pok__image{
@@ -189,9 +211,7 @@ body{
         margin: 0;
     }
 
-    .pokemon__name{
-        width: 150%;
-    }
+    
     .table__data{
         display: grid;
         grid-template-rows: auto;
@@ -210,14 +230,15 @@ body{
 
     .footer__container{
         display: flex;
-        align-items: center;
+        align-items: center;        
+        object-fit: scale-down;
         justify-content: space-between;
     }
 
     .others__title{
         margin-right:5rem ;
     }
-
+   
     
 }
 
