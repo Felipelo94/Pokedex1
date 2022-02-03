@@ -1,8 +1,20 @@
-*body {
-  min-width: 320px;
+html{
+   min-height: 100%; 
+   margin:0;   
+}
+
+body{
+    min-height: 100vh;
+}
+
+.container__app{
+   height: 100%;
+   width: 100%;
+   margin: 0;
 }
 
 .header {
+    
   background-color: gray;
   display: flex;
   align-items: center;
@@ -112,6 +124,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
   border-left: gray 1.5px solid;
   border-right: gray 1.5px solid;
   border-bottom: gray 1.5px solid;
@@ -198,6 +212,10 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
+
+    .others__title{
+        margin-right:5rem ;
     }
 
     
