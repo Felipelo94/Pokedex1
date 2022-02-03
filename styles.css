@@ -14,7 +14,7 @@ body{
 }
 
 main{
-  height: calc(100vh - var(--header-height));
+  min-height: calc(100vh - var(--header-height));
 }
 
 
@@ -63,6 +63,8 @@ main{
   font-size: 2.5rem;
 }
 
+
+
 .pokemon__icon {
   width: 3.125rem;
   height: 3.125rem;
@@ -76,8 +78,7 @@ main{
   height: 2rem;
 }
 
-.body__content {
-  height: calc(100vh - var(--header-height));
+.body__content {  
   display: flex;
   align-items: center;
   justify-content: center;
